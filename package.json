@@ -1,7 +1,7 @@
 {
   "name": "@xucroyuri/dsh-provider-catalog",
   "version": "0.2.0",
-  "description": "Maintain a local model catalog from OpenCode metadata",
+  "description": "Maintain a local model catalog from OpenCode metadata for DeepSeek Harness.",
   "type": "module",
   "main": "src/index.js",
   "exports": {
@@ -13,5 +13,22 @@
     "README.md",
     "LICENSE"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "opencode",
+    "model-catalog",
+    "llm",
+    "models"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XucroYuri/dsh-provider-catalog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XucroYuri/dsh-provider-catalog/issues"
+  },
+  "homepage": "https://github.com/XucroYuri/dsh-provider-catalog#readme",
+  "author": "XucroYuri"
 }

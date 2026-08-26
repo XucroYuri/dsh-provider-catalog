@@ -1,33 +1,33 @@
 # dsh-provider-catalog
 
-Maintain a local model catalog from OpenCode metadata for DeepSeek Harness.
+为 DeepSeek Harness 维护基于 OpenCode 元数据的本地模型目录。
 
-> Status: Stable
+> 状态：稳定
 
-## Features
+## 功能特性
 
-- Refresh model catalog from OpenCode
-- Local JSON cache
-- Filter by provider and query
-- Native Cordis command plugin
+- 从 OpenCode 刷新模型目录
+- 本地 JSON 缓存
+- 按 provider 和关键字过滤
+- 原生 Cordis 命令插件
 
-## Requirements
+## 环境要求
 
 - DeepSeek Harness (DSH) 0.1.1+
-- OpenCode CLI (optional, for sync/catalog/bridge features)
+- OpenCode CLI（可选，用于 sync/catalog/bridge 功能）
 - Node.js 22+
-- Python 3.12+ (only for fallback CLI tests)
+- Python 3.12+（仅用于备用 CLI 测试）
 
-## Installation
+## 安装
 
-Add the plugin to your DSH profile:
+将插件添加到 DSH profile：
 
 ```bash
 cd ~/.dsh/profiles/tools
 npm install @xucroyuri/dsh-provider-catalog
 ```
 
-Then add to `cordis.patch.yml`:
+然后在 `cordis.patch.yml` 中添加：
 
 ```yaml
 - insert:
@@ -35,7 +35,7 @@ Then add to `cordis.patch.yml`:
       name: '@xucroyuri/dsh-provider-catalog'
 ```
 
-## Usage
+## 使用方法
 
 ```bash
 dsh --profile tools provider-catalog refresh
@@ -43,13 +43,13 @@ dsh --profile tools provider-catalog list --provider deepseek
 dsh --profile tools provider-catalog list --query glm
 ```
 
-## Development
+## 开发
 
 ```bash
 node --check src/index.js
 PYTHONPATH=src python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-## License
+## 许可证
 
 MIT
