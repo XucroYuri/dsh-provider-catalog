@@ -64,6 +64,13 @@ function parseOpencodeModels(output) {
 
 export function apply(ctx) {
   const args = ctx.get('cmdlineArgs')?.get() ?? []
+  if ((args[0] === 'provider-catalog' || args[0] === 'catalog') && (args.includes('--version') || args.includes('-v'))) {
+    const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
+    console.log(pkg.version)
+    const exit = ctx.get('appExit')
+    if (exit) exit(0)
+    return
+  }
   if (args[0] !== 'provider-catalog' && args[0] !== 'catalog') return
 
   const exit = ctx.get('appExit')
