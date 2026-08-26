@@ -80,3 +80,10 @@ npm test
 npm run smoke
 npm run pack:check
 ```
+
+## 配置
+
+| 参数 | 默认值 | 说明 |
+|---|---|---|
+| `--dsh-home` | `~/.dsh` | DSH 主目录 |
+| `--json` | false | JSON 输出 |
