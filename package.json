@@ -30,5 +30,8 @@
     "url": "https://github.com/XucroYuri/dsh-provider-catalog/issues"
   },
   "homepage": "https://github.com/XucroYuri/dsh-provider-catalog#readme",
-  "author": "XucroYuri"
+  "author": "XucroYuri",
+  "publishConfig": {
+    "access": "public"
+  }
 }
