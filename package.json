@@ -36,5 +36,8 @@
   },
   "bin": {
     "dsh-provider-catalog": "bin/dsh-provider-catalog.js"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
