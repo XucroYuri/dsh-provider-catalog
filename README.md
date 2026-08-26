@@ -27,6 +27,13 @@ Add the plugin to your DSH profile:
 ```bash
 cd ~/.dsh/profiles/tools
 npm install @xucroyuri/dsh-provider-catalog
+
+
+Or install directly from GitHub:
+
+```bash
+npm install github:XucroYuri/dsh-provider-catalog
+```
 ```
 
 Then add to `cordis.patch.yml`:

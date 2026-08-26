@@ -27,6 +27,13 @@
 ```bash
 cd ~/.dsh/profiles/tools
 npm install @xucroyuri/dsh-provider-catalog
+
+
+Or install directly from GitHub:
+
+```bash
+npm install github:XucroYuri/dsh-provider-catalog
+```
 ```
 
 然后在 `cordis.patch.yml` 中添加：
