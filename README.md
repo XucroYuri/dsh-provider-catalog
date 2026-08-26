@@ -1,5 +1,7 @@
 # dsh-provider-catalog
 
+![CI](https://github.com/XucroYuri/dsh-provider-catalog/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/github/license/XucroYuri/dsh-provider-catalog)
+
 Maintain a local model catalog from OpenCode metadata for DeepSeek Harness.
 
 > Status: Stable

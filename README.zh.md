@@ -1,5 +1,7 @@
 # dsh-provider-catalog
 
+![CI](https://github.com/XucroYuri/dsh-provider-catalog/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/github/license/XucroYuri/dsh-provider-catalog)
+
 为 DeepSeek Harness 维护基于 OpenCode 元数据的本地模型目录。
 
 > 状态：稳定
