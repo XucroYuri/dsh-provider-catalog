@@ -103,10 +103,15 @@ export function apply(ctx) {
       const filter = args.find((a, i) => a === '--provider' && args[i+1]) ? args[args.indexOf('--provider')+1] : undefined
       const qIdx = args.indexOf('--query')
       const q = qIdx >= 0 && args[qIdx+1] ? args[qIdx+1].toLowerCase() : ''
-      for (const e of entries) {
-        if (filter && e.provider !== filter) continue
-        if (q && !`${e.provider}/${e.id} ${e.name || ''}`.toLowerCase().includes(q)) continue
-        console.log(`${e.provider}/${e.id} (${e.name || ''})`)
+      const filtered = entries.filter(e => {
+        if (filter && e.provider !== filter) return false
+        if (q && !`${e.provider}/${e.id} ${e.name || ''}`.toLowerCase().includes(q)) return false
+        return true
+      })
+      if (args.includes('--json')) {
+        console.log(JSON.stringify(filtered, null, 2))
+      } else {
+        for (const e of filtered) console.log(`${e.provider}/${e.id} (${e.name || ''})`)
       }
       finish(0); return
     }
